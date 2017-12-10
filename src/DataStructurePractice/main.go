@@ -7,13 +7,14 @@ import (
 
 func main()  {
 
+	testInitTree()
 	testBuildTree()
 }
 
 
 
 func testBuildTree()  {
-	var node BinaryTree
+	var node BinaryTreeNode
 	buildTree(&node)
 	fmt.Println("PreOrder:")
 	node.preOrderPrint()
@@ -23,3 +24,14 @@ func testBuildTree()  {
 	node.postOrderPrint()
 }
 
+func testInitTree(){
+	var node BinaryTreeNode
+	buildTree(&node)
+	fmt.Println("PreOrder:")
+	preOrder(&node)
+	fmt.Println("MidOrder:")
+	midOrder(&node)
+	fmt.Println("PostOrder:")
+	postOrder(&node)
+
+}
